@@ -1,6 +1,6 @@
 from dash import dcc, html
 
-def create_layout():
+def create_layout_sa():
     return html.Div([
         html.H1("Simulated Annealing - Network Flow Visualization"),
         

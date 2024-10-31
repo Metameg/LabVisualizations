@@ -35,7 +35,7 @@ last_n_clicks = 0
 static_fig, inflow_data = plot_inflow_over_iterations(sa_static, INIT_T, INIT_A, SEED)
 dynamic_fig = go.Figure(static_fig)
 
-def register_callbacks(app):
+def register_callbacks_sa(app):
     @app.callback(
     [
         Output('max-inflow-output', 'children'),
@@ -63,21 +63,6 @@ def register_callbacks(app):
         SEED = seed_value
         INIT_T = temp_value
         INIT_A = cooling_rate_value
-        print(INIT_T, INIT_A)
-
-        # Validate temperature and cooling rate
-        # if temp_value < 1:
-        #     return ("Error: Temperature must be greater than or equal to 1", 
-        #             dash.no_update, 
-        #             dash.no_update, 
-        #             dash.no_update, 
-        #             False, False, False)
-        # if cooling_rate_value < 0.01:
-        #     return ("Error: Cooling rate must be greater than or equal to 0.01", 
-        #             dash.no_update, 
-        #             dash.no_update, 
-        #             dash.no_update, 
-        #             False, False, False)
 
         # Determine which input triggered the callback
         triggered_id = callback_context.triggered[0]['prop_id'].split('.')[0]
