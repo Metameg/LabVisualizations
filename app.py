@@ -43,7 +43,7 @@ app.layout = html.Div([
         dcc.Tab(label='Simulated Annealing', value='sa', style=tab_style, selected_style=tab_selected_style),
         dcc.Tab(label='Additional Visualization', value='tab-2', style=tab_style, selected_style=tab_selected_style),
     ], style=tabs_styles),
-    html.Div(id='tabs-content-inline'),
+    
 
     # Content container with layouts for both tabs, controlled by CSS visibility
     html.Div([
