@@ -5,7 +5,10 @@ def create_layout_sa():
         html.H1("Simulated Annealing - Network Flow Visualization"),
         
         html.H2("The Problem"),
-        html.P("The objective of the given scenario is to maximize the outflow of a given system. Each edge of the graph has a maximum capacity that can flow through it. There is a starting node S and an exit node E. The goal is to maximize the flow into E.", style= {"margin-bottom": "60px"}),
+        html.P("The objective of the given scenario is to maximize the outflow of a given system. Each edge of the graph has a maximum capacity that can flow through it. There is a starting node S and an exit node E. The goal is to maximize the flow into E."),
+
+        html.P("Note: Conservation of flow at each node must be conserved.", style={"font-weight": "600"}),
+        html.P("That is, the flow into must always be equal to the flow out of each node.", style= {"margin-bottom": "60px"}),
 
         html.P("Before Optimization: Flow into E = 2 + 1 + 9 = 12", style={"font-weight": "600", "padding": "20"}),
         html.Img(src='../assets/images/graph_before_optimization.png',style={"width": "100%"}),
