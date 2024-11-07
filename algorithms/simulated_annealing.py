@@ -115,7 +115,6 @@ class SA:
         
         # Temperature dissipation
         self.T = self.T*(1-self.a)
-        print("temperature:", self.T)
         visited_paths_state = self.visited_paths.copy()
 
         # Store new graph and inflow value from the successor function

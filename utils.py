@@ -7,6 +7,9 @@ def plot_inflow_over_iterations(sa_instance, initial_temp, cooling_rate, seed):
     inflow_data = []
     temperature = initial_temp
 
+    if not temperature:
+        temperature = 0.0
+
     # Run simulated annealing and collect inflow values at each iteration
     while temperature > 0.01:
         temperature = temperature*(1-cooling_rate)
