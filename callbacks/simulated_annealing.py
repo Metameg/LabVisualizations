@@ -115,6 +115,14 @@ def register_callbacks_sa(app):
             line=dict(dash='dash', color='red')
         ))
 
+        # Apply smooth transition animation
+        dynamic_fig.update_layout(
+            transition=dict(
+                duration=500,
+                easing='cubic-in-out'
+            )
+        )
+
         return (f"Max Inflow: {max_inflow:.2f}", 
                 f"Current Temperature: {temperature:.2f}", 
                 dynamic_fig, 
